@@ -1,4 +1,4 @@
--[x] https://pwy.io/posts/learning-to-fly-pt1/
--[x] https://pwy.io/posts/learning-to-fly-pt2/
--[x] https://pwy.io/posts/learning-to-fly-pt3/
--[ ] https://pwy.io/posts/learning-to-fly-pt4/
+- [x] https://pwy.io/posts/learning-to-fly-pt1/
+- [x] https://pwy.io/posts/learning-to-fly-pt2/
+- [x] https://pwy.io/posts/learning-to-fly-pt3/
+- [ ] https://pwy.io/posts/learning-to-fly-pt4/
