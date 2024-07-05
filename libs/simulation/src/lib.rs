@@ -7,11 +7,11 @@ pub struct Simulation {
 }
 
 impl Simulation {
-    fn world(&self) -> &World {
+    pub fn world(&self) -> &World {
         &self.world
     }
 
-    fn random(rng: &mut dyn RngCore) -> Self {
+    pub fn random(rng: &mut dyn RngCore) -> Self {
         Self {
             world: World::random(rng)
         }
@@ -25,15 +25,15 @@ pub struct World {
 
 impl World {
 
-    fn animals(&self) -> &[Animal] {
+    pub fn animals(&self) -> &[Animal] {
         &self.animals
     }
 
-    fn foods(&self) -> &[Food] {
+    pub fn foods(&self) -> &[Food] {
         &self.foods
     }
 
-    fn random(rng: &mut dyn RngCore) -> Self {
+    pub fn random(rng: &mut dyn RngCore) -> Self {
         Self {
             animals: (0..40).map(|_| Animal::random(rng)).collect(),
             foods: (0..60).map(|_| Food::random(rng)).collect(),
@@ -50,15 +50,15 @@ struct Animal {
 
 impl Animal {
 
-    fn position(&self) -> &na::Point2<f32> {
+    pub fn position(&self) -> &na::Point2<f32> {
         &self.position
     }
 
-    fn rotation(&self) -> &na::Rotation2<f32> {
+    pub fn rotation(&self) -> &na::Rotation2<f32> {
         &self.rotation
     }
 
-    fn random(rng: &mut dyn RngCore) -> Self {
+    pub fn random(rng: &mut dyn RngCore) -> Self {
         Self {
             position: rng.gen(),
             rotation: rng.gen(),
@@ -73,11 +73,11 @@ struct Food {
 
 impl Food {
 
-    fn position(&self) -> &na::Point2<f32> {
+    pub fn position(&self) -> &na::Point2<f32> {
         &self.position
     }
 
-    fn random(rng: &mut dyn RngCore) -> Self {
+    pub fn random(rng: &mut dyn RngCore) -> Self {
         Self {
             position: rng.gen()
         }
